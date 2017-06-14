@@ -9,7 +9,7 @@ def line(katz_deli)
     theLine += " #{index + 1}. #{name}"
   end
   puts "#{theLine}"
-end
+  end
 end
 
 def take_a_number(katz_deli, name)
