@@ -1,27 +1,38 @@
 def line(line)
-    if line.length == 0
-        puts 'The line is currently empty.'
-    else
-        lines = "The line is currently:"
-        counter = 0
-        line.each do |name|
-            counter += 1
-            lines.concat(" #{counter}. #{name}")
-        end
-        puts lines
+
+    currentLine = []
+    stringLine = "The line is currently:"
+    #---------------------------------
+
+    line.each_with_index do |name, i|
+
+        currentLine << "#{name}"
+        stringLine << " #{i+ 1}. #{name}"
+
     end
+
+    #---------------------------------
+
+    puts currentLine == [] ? 'The line is currently empty.' : stringLine
+
 end
+
+#
 
 def take_a_number(array, name)
-  array << name
-  puts "Welcome, #{name}. You are number #{array.length} in line."
+
+    array << name
+
+    #------------
+
+    puts array == [] ? "Welcome, #{name}. You are number 1 in line." : "Welcome, #{name}. You are number #{array.length} in line."
+
 end
 
+#
+
 def now_serving(array)
-  if array.length == 0
-    puts "There is nobody waiting to be served!"
-  else
-    puts "Currently serving #{array.shift}."
-  end
+
+    puts array == [] ? 'There is nobody waiting to be served!' : "Currently serving #{array.shift()}."
 
 end

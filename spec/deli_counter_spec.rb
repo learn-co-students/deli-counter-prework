@@ -1,7 +1,7 @@
 describe 'Deli Counter' do
 
   let(:katz_deli) { [] }
-  let(:other_deli) { ["Logan", "Avi", "Spencer"] }
+  let(:other_deli) { ['Logan', 'Avi', 'Spencer'] }
 
   describe "#line" do
     context "there is nobody in line" do
