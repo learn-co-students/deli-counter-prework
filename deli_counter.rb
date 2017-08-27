@@ -6,14 +6,21 @@ def line(array)
     puts "The line is currently empty."
   else
     phrase = "The line is currently:"
-    counter = 1
-    for name in array do
-      phrase += " #{counter}. #{name}"
-      counter += 1
+    array.each_with_index {|name, index|
+      phrase << " #{index + 1}. #{name}"
+    }
+      puts phrase
     end
-    puts phrase
-  end
 end
+#uncomment line 16-23 and comment out 9-14 to swap to a string way to do this.
+#     counter = 1
+#     for name in array do
+#       phrase += " #{counter}. #{name}"
+#       counter += 1
+#     end
+#     puts phrase
+#   end
+# end
 
 def take_a_number(array, name)
   array.push(name)
