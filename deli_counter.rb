@@ -14,7 +14,7 @@ end
 
 def line(katz_deli) 
   numLine = "The line is currently:"
-  if katz_deli.length == 0 
+  if katz_deli.empty?
     puts "The line is currently empty."
   else
     i = 0
