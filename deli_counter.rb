@@ -19,7 +19,7 @@ def line(katz_deli)
     katz_deli.each.with_index(1) do |guest, index|
     new_array.push(" #{index}. #{guest}")
   end
-    puts "The line is currently:#{new_array.join("")}"
+    puts "The line is currently:#{new_array.join}"
   end
 end
 
