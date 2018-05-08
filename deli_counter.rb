@@ -11,7 +11,6 @@ def line(array)
     puts "The line is currently empty."
   else
     #code here
-    end
   end
 end
 
