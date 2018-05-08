@@ -14,7 +14,7 @@ def line(array)
     for num in 0...array.length
       line_list.push(" #{num+1}. #{array[num]}")
     end
-    puts "The line is currently:#{line_list}"
+    puts "The line is currently:#{line_list.join}"
   end
 end
 
