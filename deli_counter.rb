@@ -10,7 +10,11 @@ def line(array)
   if array.length == 0
     puts "The line is currently empty."
   else
-    #code here
+    line_list = []
+    for num in 0...array.length
+      line_list.push(" #{num+1}. #{array[num]}")
+    end
+    puts "The line is currently:#{line_list}"
   end
 end
 
