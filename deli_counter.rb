@@ -1,7 +1,7 @@
 # Write your code here.
 def buildLine(katz_deli)
   phrase = ''
-‹›  count = 0
+  count = 0
   while count < katz_deli.length
     phrase += " #{count + 1}. #{katz_deli[count]}"
     count += 1
