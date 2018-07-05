@@ -1,29 +1,14 @@
 # Write your code here.
 def line(line)
-  statement = []
   if line.size == 0
     puts "The line is currently empty."
   else
-    # for index in 0..line.size do
-    #   statement = "The line is currently: #{index+1}. #{line}"
-    # end
-    #   statement
-    # counter = 0
-    # people = ""
-    # while counter < line.size
-    #   people = "#{counter+1}. #{line[counter]}"
-    #   counter += 1
-    # end
-    #  "The line is currently: #{people}"
-
+    current_line = "The line is currently:"
     line.each_with_index.map do |person, index|
-        statement.push("#{index+1}. #{person}")
+        current_line = current_line + " #{index+1}. #{person}"
     end
-
-    #.join(" ") pulls it out of the array and lists it out
-    puts "The line is currently: #{statement.join(" ")}"
+    puts current_line
   end
-
 end
 
 def take_a_number(array, name)
@@ -47,5 +32,4 @@ def now_serving(array)
     puts "Currently serving #{array.first}."
     array.shift
   end
-
 end
