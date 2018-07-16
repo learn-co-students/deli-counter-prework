@@ -26,6 +26,6 @@ def now_serving(katz_line)
 
   else
     puts "Currently serving #{katz_line.first}."
-    katz_line.shift
+    katz_line.shift #removes the first customer in the queue
   end
 end
