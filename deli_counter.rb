@@ -2,11 +2,10 @@ def line(katz_line)
   position = 1
   queue = []
 
-  if katz_line.length == 0
+  if katz_line.empty?
     puts "The line is currently empty."
 
   else
-      #print "The line is currently: "
       katz_line.each do |customer|
       queue.push("#{position}. #{customer}")
       position += 1
