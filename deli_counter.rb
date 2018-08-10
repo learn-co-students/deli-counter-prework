@@ -4,8 +4,7 @@ def line(katz_deli)
   else
     current_state_of_line = "The line is currently:"
     katz_deli.each_with_index do |name, index|
-      current_state_of_lineline_order << " #{index+1}. #{name}"
-      current_state_of_line
+      current_state_of_line << " #{index+1}. #{name}"
     end
     puts current_state_of_line
   end
