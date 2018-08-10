@@ -2,12 +2,12 @@ def line(katz_deli)
   if katz_deli == []
     puts "The line is currently empty."
   else
-    line_order = "The line is currently:"
+    current_state_of_line = "The line is currently:"
     katz_deli.each_with_index do |name, index|
-      line_order << " #{index+1}. #{name}"
-      line_order
+      current_state_of_lineline_order << " #{index+1}. #{name}"
+      current_state_of_line
     end
-    puts line_order
+    puts current_state_of_line
   end
 end
 
