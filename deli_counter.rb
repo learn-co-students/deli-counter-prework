@@ -1,7 +1,3 @@
-# Write your code here.
-
-katz_deli = []
-
 def line(array)
   i = 0
   phrase = "The line is currently: "
@@ -17,13 +13,8 @@ def line(array)
 end 
 
 def take_a_number(line, name)
-  if line.length == 0 
-    line.push(name)
-    puts "Welcome, #{name}. You are number #{line.length} in line."
-  else 
-    line.push(name) 
-    puts "Welcome, #{name}. You are number #{line.length} in line."
-  end 
+  line.push(name)
+  puts "Welcome, #{name}. You are number #{line.length} in line."
 end 
 
 def now_serving(line)
