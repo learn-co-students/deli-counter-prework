@@ -4,7 +4,11 @@ def line(array)
   if array == []
     puts "The line is currently empty."
   else
-    puts "The line is currently: 1. Logan 2. Avi 3. Spencer"
+    current_line = "The line is currently:"
+    array.each.with_index(1) do |person, i|
+      current_line << " #{i}. #{person}"
+    end
+    puts current_line
   end
 end
 
@@ -18,17 +22,12 @@ def take_a_number(array, string)
 end
 
 def now_serving(array)
-  count = 0
   
-  if array.length > 0
-    while count < array.length
-      new_array = array.pop
-      puts "Currently serving #{new_array[0]}."
-      count += 1
-    end
+  if array.empty?
     puts "There is nobody waiting to be served!"
-  else
-    puts "There is nobody waiting to be served!"
+  else 
+    puts "Currently serving #{array.first}."
+    array.shift
   end
-      
+  
 end
