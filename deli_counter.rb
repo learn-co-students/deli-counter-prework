@@ -4,11 +4,11 @@ katz_deli = []
 
 def line(array)
   if array.length > 0 
-    newArray = []
-    array.each_with_indexhow  do | name, number |
-    newArray << "The line is currently: #{number + 1}. #{name}" 
+    newString = ""
+    array.each_with_index  do | name, number |
+    newString << "The line is currently: #{number + 1}. #{name}" 
     end
-    puts newArray
+    puts newString
   else
     puts "The line is currently empty."
   end
