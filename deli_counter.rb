@@ -5,7 +5,7 @@ katz_deli = []
 def line(array)
   if array.length > 0 
     newArray = []
-    array.each_with_index.new_str do | name, number |
+    array.each_with_indexhow  do | name, number |
     newArray << "The line is currently: #{number + 1}. #{name}" 
     end
     puts newArray
