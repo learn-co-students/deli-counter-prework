@@ -13,3 +13,12 @@ def line(array)
     puts "The line is currently empty."
   end
 end
+
+def take_a_number(katz_deli, name)
+katz_deli.push(name)
+
+end
+# function takeANumber(currentLine, name){
+#   currentLine.push(name);
+# return `Welcome, ${name}. You are number ${currentLine.length} in line.`;
+# }
