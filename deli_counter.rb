@@ -4,9 +4,9 @@ katz_deli = []
 
 def line(array)
   if array.length > 0 
-    newString = ""
+    newString = "The line is currently: "
     array.each_with_index  do | name, number |
-    newString << "The line is currently: #{number + 1}. #{name}" 
+    newString << "#{number + 1}. #{name}" 
     end
     puts newString
   else
