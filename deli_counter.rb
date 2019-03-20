@@ -5,9 +5,13 @@ def line(array)
     puts "The line is currently empty." 
     return
   end
+  result= "The line is currently:" 
+  for i in 0...array.length 
+      result << " #{i+1}. #{array[i]}"
+  end
   
-    result = "The line is currently:"
-    array.each_with_index { |name, index| result << " #{index+1}. #{name}"}
+    # result = "The line is currently:"
+    # array.each_with_index { |name, index| result << " #{index+1}. #{name}"}
   
   puts result
 end
