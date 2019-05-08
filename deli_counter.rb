@@ -4,11 +4,14 @@ katz_deli = [];
 other_deli = [];
 
 def line(katz_deli)
-  if katz_deli.length > 0
+  if katz_deli.length != 0
     sentence = "The line is currently:"
-    for i in 0..katz_deli.length-1 
-      sentence = sentence + " #{i+1}. #{katz_deli[i]}"
-      end
+    katz_deli.each do |name|
+      sentence = sentence + " #{katz_deli.index(name)+1}. #{name}"
+    end
+    # for i in 0..katz_deli.length-1 
+    #   sentence = sentence + " #{i+1}. #{katz_deli[i]}"
+    #   end
     puts sentence 
   else 
     puts "The line is currently empty."
