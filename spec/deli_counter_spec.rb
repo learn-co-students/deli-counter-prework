@@ -3,24 +3,7 @@ describe 'Deli Counter' do
   let(:katz_deli) { [] }
   let(:other_deli) { ["Logan", "Avi", "Spencer"] }
 
-  describe "#line" do
-    context "there is nobody in line" do
-      it "should say the line is empty" do
-        # This line checks the current standard output (your terminal screen)
-        # to make sure the correct output has been puts'ed.
-        expect($stdout).to receive(:puts).with("The line is currently empty.")
-        line(katz_deli)
-      end
-    end
-
-    context "there are people in line" do
-      it "should display the current line" do
-        expect($stdout).to receive(:puts).with("The line is currently: 1. Logan 2. Avi 3. Spencer")
-        line(other_deli)
-      end
-    end
-  end
-
+  
   describe "#take_a_number" do
     context "there is nobody in line" do
       it "should add a person to the line" do
@@ -63,6 +46,24 @@ describe 'Deli Counter' do
         expect($stdout).to receive(:puts).with("Currently serving Logan.")
         now_serving(other_deli)
         expect(other_deli).to eq(%w(Avi Spencer))
+      end
+    end
+  end
+
+  describe "#line" do
+    context "there is nobody in line" do
+      it "should say the line is empty" do
+        # This line checks the current standard output (your terminal screen)
+        # to make sure the correct output has been puts'ed.
+        expect($stdout).to receive(:puts).with("The line is currently empty.")
+        line(katz_deli)
+      end
+    end
+
+    context "there are people in line" do
+      it "should display the current line" do
+        expect($stdout).to receive(:puts).with("The line is currently: 1. Logan 2. Avi 3. Spencer")
+        line(other_deli)
       end
     end
   end
